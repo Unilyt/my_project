@@ -1,0 +1,2 @@
+C:\Users\Lenovo\Documents\проги\tic tac toe with gravity\x64\Debug\tic tac toe with gravity.exe
+C:\Users\Lenovo\Desktop\project\tic tac toe with gravity\x64\Debug\tic tac toe with gravity.exe
