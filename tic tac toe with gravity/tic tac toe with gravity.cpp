@@ -15,6 +15,7 @@ int main()
         show_arr(ground1);
         while (true)
         {
+            cout << "enter cords: ";
             cin >> hod[0] >> hod[1];
             player_next1(ground1, hod);
             if (ground1[hod[0]][hod[1]] != '0' && ground1[hod[0]][hod[1]] != '-') {
@@ -52,6 +53,7 @@ int main()
             for (int i = 0; i < 3; i++) {
                 if (ground1[hod[0]- i][hod[1]] == 'X') {
                     count++;
+                    //если проверка в начале
                     if (hod[0] - i == 0) {
                         if(count == 4){
                             cout << "player - X, Win!";
@@ -68,14 +70,30 @@ int main()
                             }
                         }
                     
+                    }                    
+                    //если проверка в конце
                     }
                     else if (hod[0] + i == 20) {
-
+                        if (count == 4) {
+                            cout << "player - X, Win!";
+                            return 0;
+                        }
+                        else {
+                            for (int i = 0; i < 3; i++) {
+                                if (ground1[hod[0] - i][hod[1]] == 'X') {
+                                    count++;
+                                }
+                                if (count == 4) {
+                                    cout << "player - X, Win!";
+                                    return 0;
+                                }
+                            }
+                        }
                     }
 
-                }
-                    
             }
+                    
         }
+    }
     }
 }
